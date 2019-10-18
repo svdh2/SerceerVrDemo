@@ -1,0 +1,21 @@
+swagger: "2.0"
+
+info:
+  version: 1.0.0
+  title: PyStock API
+  description: API to manage python package repository
+
+schemes:
+  - http
+basePath: /demo2_api
+
+paths:
+  /ping:
+    get:
+      summary: Server Ping
+      description: returns the unique ID of the server
+      responses:
+          200:
+            description: Server Identification String
+            schema:
+                  type: string

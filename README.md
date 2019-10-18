@@ -10,17 +10,13 @@
 
 ### pyenv
 
-install Pyenv if it is not present on you system
+Install Pyenv if it is not present on you system by typing the following comands in your console:
 
 ```
 > brew update
 > brew install pyenv
-```
-
-append this line to your shell
-
-```
-> pyenv init
+> echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bash_profile
+> exec "$SHELL"
 ```
 
 Set python globally to
@@ -38,8 +34,14 @@ Set python globally to
 
 ## how to run this software
 
+install the dependencies
+```
+> pipenv sync
+```
+Now launch the server
+
 ``` 
-> pipenv run python src/server.py
+> pipenv run python src/server.py serve
  ```
  
  The output should be:
